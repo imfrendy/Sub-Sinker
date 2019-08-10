@@ -379,7 +379,7 @@ public class MeshGenerator : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() // Visually see random map with bulit in gizmo tool
     {
         /*
         if (squareGrid != null)
