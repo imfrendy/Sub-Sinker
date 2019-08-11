@@ -96,7 +96,7 @@ public class MapGenerator : NetworkBehaviour
             ServerManager.instance.mapWidth * 3f / 10f);
         darkBG.transform.localScale = new Vector3(ServerManager.instance.mapHeight * 3f / 10f + 15, 1,
             ServerManager.instance.mapWidth * 3f / 10f + 15);
-        ServerManager.instance.mapGenPrefab.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial.mainTextureScale = new Vector2(ServerManager.instance.mapWidth / 10f, ServerManager.instance.mapHeight / 10f); // Change Tiling settings of the map
+        ServerManager.instance.mapGenPrefab.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial.mainTextureScale = new Vector2(ServerManager.instance.mapWidth / 1.5f, ServerManager.instance.mapHeight / 1.5f); // Change Tiling settings of the map
     }
 
     void ProcessMap()
