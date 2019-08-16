@@ -23,6 +23,7 @@ public class PickupSpawner : NetworkBehaviour {
     public int ships = 2;
     public int seaweeds = 30;
     public int fishPerPlayer = 50;
+    public int spawnRadius = 5;
     int ammos;
     int healths;
 
@@ -131,6 +132,11 @@ public class PickupSpawner : NetworkBehaviour {
                 spawnPosition = MapGenerator.instance.GetComponent<MapGenerator>().GetGroundSpawnPos();
             }
             else
+            {
+                spawnPosition = MapGenerator.instance.GetComponent<MapGenerator>().GetSpawnPos();
+            }
+
+            while(LayerMask.LayerToName(prefab.layer) == "Default" && Physics.CheckSphere(spawnPosition, spawnRadius))
             {
                 spawnPosition = MapGenerator.instance.GetComponent<MapGenerator>().GetSpawnPos();
             }
