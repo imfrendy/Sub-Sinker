@@ -23,7 +23,7 @@ public class PickupSpawner : NetworkBehaviour {
     public int ships = 2;
     public int seaweeds = 30;
     public int fishPerPlayer = 50;
-    public int spawnRadius = 5;
+    public int spawnRadius = 1;
     int ammos;
     int healths;
 
